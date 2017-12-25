@@ -47,6 +47,7 @@
     "build": "NODE_ENV=production ./node_modules/.bin/rollup -c",
     // This will generate a webpack pased client bundles
     "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
+    // This will generate client bundle first and then server bundle
     "build:prod": "yarn build:client && yarn build",
     "start": "yarn build:prod && node ./build/server.min.js",
     "start:dev": "parallelshell 'npm run build:watch' 'npm run build:watch:client' 'nodemon ./build/server/index.js'"
