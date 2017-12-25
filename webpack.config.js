@@ -44,15 +44,15 @@ module.exports = {
     },
     module: {
         loaders: [
+            // Loaders are internal tranformers within webpack package itself
+            // This one uses babel for transformation
             {
                 test: /.js$/,
                 loader: "babel-loader",
                 include: path.join(__dirname, "app"),
                 exclude: /node_modules/,
                 query: {
-                    presets: ["env", "react"],
-                    compact: false,
-                    cacheDirectory: true
+                    presets: ["env", "react"]
                 }
             }
         ]
