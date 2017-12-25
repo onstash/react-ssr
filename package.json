@@ -43,6 +43,7 @@
     "webpack": "^3.10.0"
   },
   "scripts": {
+  	// This will generate a rollupjs based server bundle
     "build": "NODE_ENV=production ./node_modules/.bin/rollup -c",
     "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
     "build:prod": "yarn build:client && yarn build",
