@@ -43,12 +43,10 @@
     "webpack": "^3.10.0"
   },
   "scripts": {
-    "build": "NODE_ENV=production babel ./app -d build",
-    "build:watch": "babel ./app -d build --watch",
+    "build": "NODE_ENV=production ./node_modules/.bin/rollup -c",
     "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
-    "build:watch:client": "webpack --config ./webpack.config.js/ --watch",
-    "build:prod": "yarn build && yarn build:client",
-    "start": "yarn build:prod && node ./build/server/index.js",
+    "build:prod": "yarn build:client && yarn build",
+    "start": "yarn build:prod && node ./build/server.min.js",
     "start:dev": "parallelshell 'npm run build:watch' 'npm run build:watch:client' 'nodemon ./build/server/index.js'"
   }
 }
