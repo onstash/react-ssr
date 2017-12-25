@@ -13,6 +13,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // }
 // Reference: https://github.com/kossnocorp/assets-webpack-plugin
 const AssetsPlugin = require('assets-webpack-plugin');
+// CleanWebpackPlugin is used to remove files from given path
+// Useful for removing build files before you start building new ones
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
 
