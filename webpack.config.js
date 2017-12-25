@@ -21,6 +21,10 @@ module.exports = {
     entry: {
         // This is the entry point of the bundle
         app: "./app/index.js",
+        // This is used to separate 'vendor' aka 'third-party' code
+        // into a separate bundle. This is done because 'third-party' code
+        // does not change as rapidly as your the code you're writing,
+        // when you're developing an app.
         vendor: [
             'react',
             'react-dom',
