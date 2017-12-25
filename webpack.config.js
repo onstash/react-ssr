@@ -33,6 +33,8 @@ module.exports = {
         ]
     },
     output: {
+        // This is the target directory for your bundle
+        // Usually it's "build" or "dist" or sometimes "public"
         path: path.join(__dirname, "build"),
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].js'
