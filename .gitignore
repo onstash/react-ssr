@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+build
+node_modules
+coverage # when I run my tests (jest), I also generate test
+coverage reports
