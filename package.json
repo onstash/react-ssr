@@ -45,6 +45,7 @@
   "scripts": {
   	// This will generate a rollupjs based server bundle
     "build": "NODE_ENV=production ./node_modules/.bin/rollup -c",
+    // This will generate a webpack pased client bundles
     "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
     "build:prod": "yarn build:client && yarn build",
     "start": "yarn build:prod && node ./build/server.min.js",
