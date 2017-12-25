@@ -82,6 +82,7 @@ module.exports = {
                 },
             }
         }),
+        // Plugin to separate main bundle into 3 chunks - manifest, vendor & app
         new webpack.optimize.CommonsChunkPlugin({
           name: ['vendor', 'manifest'], // vendor libs + extracted manifest
           minChunks: Infinity,
