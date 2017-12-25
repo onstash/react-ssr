@@ -13,5 +13,5 @@ Contributions are always welcome. Let us discuss in [issues](https://github.com/
 
 ## TODO
 - [x] Add README.md
-- [ ] Bundle server side using [Rollup](https://rollupjs.org/)
+- [x] Bundle server side using [Rollup](https://rollupjs.org/)
 - [ ] Replace express with fastify if there is significant performance gain
