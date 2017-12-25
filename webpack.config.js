@@ -1,5 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
+// UglifyJSPlugin is used to do tree-shaking and remove dead & ununsed code
+// using es6 modules (import & export)
+// Reference: https://webpack.js.org/guides/tree-shaking/
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
