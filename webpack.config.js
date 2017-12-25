@@ -19,6 +19,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
+        // This is the entry point of the bundle
         app: "./app/index.js",
         vendor: [
             'react',
