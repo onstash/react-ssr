@@ -49,7 +49,7 @@
     "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
     // This will generate client bundle first and then server bundle
     "build:prod": "yarn build:client && yarn build",
+    // This will run "npm run build:prod" or "yarn build:prod" and start the server
     "start": "yarn build:prod && node ./build/server.min.js",
-    "start:dev": "parallelshell 'npm run build:watch' 'npm run build:watch:client' 'nodemon ./build/server/index.js'"
   }
 }
