@@ -1,3 +1,4 @@
+import webpackAssets from '../../build/webpack-assets.json';
 export default function renderFullPage(html, preloadedState) {
     return `
         <!doctype html>
@@ -10,7 +11,9 @@ export default function renderFullPage(html, preloadedState) {
             <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
             </script>
-            <script src="/bundle.js"></script>
+            <script src="/build/${webpackAssets.manifest.js}"></script>
+            <script src="/build/${webpackAssets.vendor.js}"></script>
+            <script src="/build/${webpackAssets.app.js}"></script>
         </body>
         </html>
     `
