@@ -36,6 +36,9 @@ module.exports = {
         // This is the target directory for your bundle
         // Usually it's "build" or "dist" or sometimes "public"
         path: path.join(__dirname, "build"),
+        // This is format in which bundles and chunked bundles will be stored
+        // This is done primarily for caching
+        // For example 'third-party' bundle will be stored as 'vendor.<hash>.js'
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].js'
     },
