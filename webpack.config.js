@@ -47,7 +47,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(path.join(__dirname, "build")),
         new CompressionPlugin(),
         new AssetsPlugin({
           path: path.join(process.cwd(), 'build'),
