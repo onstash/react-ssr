@@ -4,6 +4,14 @@ const webpack = require("webpack");
 // using es6 modules (import & export)
 // Reference: https://webpack.js.org/guides/tree-shaking/
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// AssetsPlugin is used to generate a JSON file with the client bundle path details
+// Structure of the JSON file -
+// {
+//    manifest: { js: <vendorBundlePath> },
+//    vendor: { js: <manifestBundlePath> },
+//    app: { js: <appBundlePath> }
+// }
+// Reference: https://github.com/kossnocorp/assets-webpack-plugin
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
