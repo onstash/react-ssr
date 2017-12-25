@@ -1,0 +1,39 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "React server side rendering using nodeJS",
+  "main": "index.js",
+  "repository": "https://github.com/onstash/react-ssr",
+  "author": "Santosh Venkatraman <santosh.venk@gmail.com>",
+  "license": "GPL",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "fastify": "^0.37.0",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-dom-server": "^0.0.5",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "nodemon": "^1.14.3",
+    "parallelshell": "^3.0.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production babel ./app -d build",
+    "build:watch": "babel ./app -d build --watch",
+    "build:client": "NODE_ENV=production webpack --config ./webpack.config.js/",
+    "build:watch:client": "webpack --config ./webpack.config.js/ --watch",
+    "build:prod": "yarn build && yarn build:client",
+    "start": "yarn build:prod && node ./build/server/index.js",
+    "start:dev": "parallelshell 'npm run build:watch' 'npm run build:watch:client' 'nodemon ./build/server/index.js'"
+  }
+}
